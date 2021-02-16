@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html th:include="layout :: page"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<div th:fragment="content">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Demo Spring Boot</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/individual">Add New</a></li>
+                <li><a href="/list">All </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">Demo Spring Boot</div>
+                <div class="panel-body">
+                    <p>Choose an action.</p>
+                </div>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="/list" role="button">View
+                        all Individuals</a> <a class="btn btn-lg btn-success" href="/individual"
+                                               role="button">Add an Individual</a>
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <div th:replace="fragments/footer :: footer">&copy; Demo Computing</div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
